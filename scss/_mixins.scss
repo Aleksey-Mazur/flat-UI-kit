@@ -1,0 +1,53 @@
+@mixin header($bg, $main-height) {
+  width: $main-width;
+  height: $main-height;
+  background: $bg;
+  text-align: center;
+  padding: 18px 0;
+  font: $main-font;
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: 1px solid $border-color;
+}
+
+@mixin footer($bg) {
+  width: $main-width;
+  height: $main-height;
+  background-color: $bg;
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@mixin button($bg) {
+  width: 250px;
+  height: $main-height;
+  background-color: $bg;
+  text-align: center;
+  padding: 18px 0;
+  font: $main-font;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: $radius;
+  @include border;
+}
+
+@mixin active-btn {
+  width: $main-width;
+  height: $main-height;
+  border-left: 7px solid #fff;
+  border-bottom: 1px solid $border-color;
+  font: $reg-font;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 5%;
+}
+
+@mixin border {
+  border: 1px solid $border-color;
+}

@@ -198,3 +198,302 @@ table {
 .icon-twitter:before {
   content: "\ea96";
 }
+
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon2.woff?1w0myv") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cog:before {
+  content: "\e994";
+}
+
+.icon-spoon-knife:before {
+  content: "\e9a3";
+}
+
+.icon-heart:before {
+  content: "\e9da";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(ellipse at center, #986499 0%, #30325c 71%, #18192b 100%);
+  height: 100vh;
+}
+
+.container {
+  width: 1040px;
+  height: 955px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+.container > div {
+  width: 300px;
+  height: 430px;
+}
+
+.recipe {
+  width: 100%;
+  height: 425px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.recipe .header {
+  width: 100%;
+  height: 190px;
+  background: url(../img/pie.jpg) no-repeat;
+  text-align: center;
+  padding: 18px 0;
+  font: 20px "proxima_novabold";
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.recipe .recipe-main {
+  background: rgba(255, 255, 255, 0.1);
+  height: 235px;
+}
+
+.login {
+  width: 100%;
+  height: 388px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.login .header {
+  width: 100%;
+  height: 60px;
+  background: rgba(73, 119, 208, 0.53);
+  text-align: center;
+  padding: 18px 0;
+  font: 20px "proxima_novabold";
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.login .login-main {
+  background: rgba(255, 255, 255, 0.1);
+  height: 328px;
+}
+
+.border-vert {
+  width: 1px;
+  height: 78px;
+  background: rgba(255, 255, 255, 0.2);
+  display: block;
+}
+
+.profile {
+  width: 100%;
+  height: 425px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.profile .header {
+  width: 100%;
+  height: 60px;
+  background: rgba(168, 115, 28, 0.53);
+  text-align: center;
+  padding: 18px 0;
+  font: 20px "proxima_novabold";
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.profile .info {
+  width: 100%;
+  height: 150px;
+  background: url(../img/profile_bg.jpg) no-repeat;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.profile .profile-main {
+  background: rgba(255, 255, 255, 0.1);
+  height: 215px;
+}
+.profile .profile-main a {
+  display: block;
+}
+
+.graph {
+  width: 100%;
+  height: 430px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.graph .header {
+  width: 100%;
+  height: 100px;
+  background: rgba(105, 193, 242, 0.53);
+  text-align: center;
+  padding: 18px 0;
+  font: 20px "proxima_novabold";
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+}
+.graph .header strong {
+  display: inline-block;
+  width: 100px;
+  height: 78px;
+  padding-top: 25px;
+  font: 10px "proxima_novaregular";
+}
+.graph .header strong span {
+  display: block;
+  font: 30px "proxima_novalight";
+}
+
+.download {
+  width: 100%;
+  height: 390px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.download .header {
+  width: 100%;
+  height: 60px;
+  background: rgba(84, 193, 118, 0.53);
+  text-align: center;
+  padding: 18px 0;
+  font: 20px "proxima_novabold";
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.download .download-main {
+  background: rgba(255, 255, 255, 0.1);
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.download .download-main svg {
+  width: 165px;
+  height: 165px;
+  display: block;
+}
+
+.loc-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.location {
+  width: 100%;
+  height: 145px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.location .header {
+  width: 100%;
+  height: 60px;
+  background: rgba(253, 228, 127, 0.53);
+  text-align: center;
+  padding: 18px 0;
+  font: 20px "proxima_novabold";
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.location .location-main {
+  background: rgba(255, 255, 255, 0.1);
+  height: 85px;
+}
+
+.btn-wrapper {
+  height: 275px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.white-btn {
+  width: 250px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  padding: 18px 0;
+  font: 20px "proxima_novabold";
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark-blue-btn {
+  width: 250px;
+  height: 60px;
+  background-color: rgba(73, 119, 208, 0.53);
+  text-align: center;
+  padding: 18px 0;
+  font: 20px "proxima_novabold";
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.blue-btn {
+  width: 250px;
+  height: 60px;
+  background-color: rgba(105, 193, 242, 0.53);
+  text-align: center;
+  padding: 18px 0;
+  font: 20px "proxima_novabold";
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.green-btn {
+  width: 250px;
+  height: 60px;
+  background-color: rgba(84, 193, 118, 0.53);
+  text-align: center;
+  padding: 18px 0;
+  font: 20px "proxima_novabold";
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
