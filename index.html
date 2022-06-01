@@ -13,13 +13,43 @@
       <div class="recipe-wrapper">
         <div class="recipe">
           <div class="header"></div>
-          <div class="recipe-main"></div>
+          <div class="recipe-main">
+            <ul>
+              <li class="icon-cog"><a href="#">Settings</a></li>
+              <li class="icon-location"><a href="#">Location</a></li>
+              <li class="active icon-heart"><a href="#">Favourite</a></li>
+              <li class="icon-spoon-knife"><a href="#">Food</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="login-wrapper">
         <div class="login">
           <div class="header">login</div>
-          <div class="login-main"></div>
+          <form action="#">
+            <fieldset>
+              <div class="row">
+                <label for="form-email" name="Email">Email</label>
+                <input
+                  type="email"
+                  name="Email"
+                  id="form-email"
+                  placeholder="Enter your E-mail here"
+                  class="active"
+                />
+              </div>
+              <div class="row">
+                <label for="form-password" name="Password">Password</label>
+                <input type="password" name="Password" id="form-password" />
+              </div>
+              <span class="more">Or</span>
+            </fieldset>
+          </form>
+          <div class="footer">
+            <a href="#" class="icon-twitter"></a>
+            <a href="#" class="icon-google-plus"></a>
+            <a href="#" class="icon-facebook"></a>
+          </div>
         </div>
       </div>
       <div class="profile-wrapper">
@@ -27,9 +57,7 @@
           <div class="header">profile</div>
           <div class="info">
             <img src="img/john_doe.jpg" alt="John Doe" class="photo" />
-            <strong
-              >John Doe<span class="icon-location">New York, NY</span></strong
-            >
+            <strong>John Doe<span>New York, NY</span></strong>
           </div>
           <div class="profile-main">
             <div class="flw-section">
@@ -49,6 +77,13 @@
             <strong>short<span>21</span></strong>
           </div>
           <div class="graph-main"></div>
+          <div class="footer">
+            <strong>high<span>64</span></strong>
+            <span class="border-vert"></span>
+            <strong>low<span>24</span></strong>
+            <span class="border-vert"></span>
+            <strong>all time<span>21</span></strong>
+          </div>
         </div>
       </div>
       <div class="download-wrapper">
@@ -108,7 +143,10 @@
       <div class="loc-btn-wrapper">
         <div class="location">
           <div class="header">location</div>
-          <div class="location-main"></div>
+          <div class="location-main">
+            <strong>San Francisco</strong>
+            <span class="border-vert"></span>
+          </div>
         </div>
         <div class="btn-wrapper">
           <a href="#" class="white-btn">BUTTON</a>
