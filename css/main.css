@@ -256,12 +256,26 @@ body {
   height: 430px;
 }
 
+.border-vert {
+  width: 1px;
+  height: 78px;
+  background: rgba(255, 255, 255, 0.2);
+  display: block;
+}
+
+.loc-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .recipe {
+  border: 1px solid rgba(255, 255, 255, 0.3);
   width: 100%;
   height: 430px;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .recipe .header {
   width: 100%;
@@ -295,7 +309,11 @@ body {
   font-size: 22px;
   cursor: pointer;
 }
-.recipe .recipe-main li a {
+.recipe .recipe-main li.active::before {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.recipe-main li a {
   height: 60px;
   width: 100%;
   display: block;
@@ -306,16 +324,13 @@ body {
   text-decoration: none;
   padding: 20px 0 20px 25px;
 }
-.recipe .recipe-main li.active::before {
-  color: rgba(255, 255, 255, 0.85);
-}
 
 .login {
+  border: 1px solid rgba(255, 255, 255, 0.3);
   width: 100%;
   height: 388px;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .login .header {
   width: 100%;
@@ -327,58 +342,6 @@ body {
   color: #fff;
   text-transform: uppercase;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-.login form {
-  background: rgba(255, 255, 255, 0.1);
-  height: 268px;
-  font: 16px "proxima_novaregular";
-  color: #fff;
-}
-.login form fieldset {
-  width: 85%;
-  height: 100%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.login form fieldset .row {
-  width: 100%;
-  height: 100px;
-}
-.login form fieldset .row [type=email],
-.login form fieldset .row [type=password] {
-  display: block;
-  height: 60px;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.2);
-  outline: none;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
-  color: #fff;
-}
-.login form fieldset .row ::placeholder {
-  color: #fff;
-}
-.login form fieldset .row .active {
-  background: rgba(255, 255, 255, 0.64);
-}
-.login form fieldset .more {
-  position: relative;
-  font: 14px "skolar_peregular";
-}
-.login form fieldset .more:before, .login form fieldset .more:after {
-  content: "";
-  position: absolute;
-  width: 105px;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.4);
-  top: 6px;
-  right: 25px;
-}
-.login form fieldset .more:after {
-  left: 25px;
 }
 .login .footer {
   width: 100%;
@@ -401,19 +364,66 @@ body {
   box-shadow: 0 0 0.55em 0em #fff;
 }
 
-.border-vert {
-  width: 1px;
-  height: 78px;
-  background: rgba(255, 255, 255, 0.2);
+.login form {
+  background: rgba(255, 255, 255, 0.1);
+  height: 268px;
+  font: 16px "proxima_novaregular";
+  color: #fff;
+}
+.login form fieldset {
+  width: 85%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login form fieldset .row {
+  width: 100%;
+  height: 100px;
+}
+.login form fieldset .row [type=email],
+.login form fieldset .row [type=password] {
+  border: 1px solid rgba(255, 255, 255, 0.3);
   display: block;
+  height: 60px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+  border-radius: 10px;
+  color: #fff;
+}
+.login form fieldset .row ::placeholder {
+  color: #fff;
+}
+.login form fieldset .row .active {
+  background: rgba(255, 255, 255, 0.64);
+}
+
+.login form fieldset .more {
+  position: relative;
+  font: 14px "skolar_peregular";
+}
+.login form fieldset .more:before, .login form fieldset .more:after {
+  content: "";
+  position: absolute;
+  width: 105px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+  top: 6px;
+  right: 25px;
+}
+.login form fieldset .more:after {
+  left: 25px;
 }
 
 .profile {
+  border: 1px solid rgba(255, 255, 255, 0.3);
   width: 100%;
   height: 425px;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .profile .header {
   width: 100%;
@@ -427,11 +437,11 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 .profile .info {
+  border: 1px solid rgba(255, 255, 255, 0.3);
   width: 100%;
   height: 150px;
   background: url(../img/profile_bg.jpg) no-repeat;
   background-size: cover;
-  border: 1px solid rgba(255, 255, 255, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -442,6 +452,7 @@ body {
   border: 4px solid #b9a69e;
   border-radius: 50%;
 }
+
 .profile .info strong {
   font: 20px "proxima_novabold";
   color: #fff;
@@ -459,11 +470,12 @@ body {
   top: 0;
   left: 0;
 }
-.profile .profile-main {
+
+.profile-main {
   background: rgba(255, 255, 255, 0.1);
   height: 215px;
 }
-.profile .profile-main .flw-section {
+.profile-main .flw-section {
   width: 100%;
   height: 120px;
   background: transparent;
@@ -478,7 +490,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.profile .profile-main .flw-section strong {
+.profile-main .flw-section strong {
   display: inline-block;
   width: 100px;
   height: 78px;
@@ -486,21 +498,21 @@ body {
   font: 16px "proxima_novaregular";
   text-transform: none;
 }
-.profile .profile-main .flw-section strong span {
+.profile-main .flw-section strong span {
   display: block;
   font: 30px "proxima_novalight";
 }
-.profile .profile-main a {
+.profile-main a {
   display: block;
   margin: auto;
 }
 
 .graph {
+  border: 1px solid rgba(255, 255, 255, 0.3);
   width: 100%;
   height: 422px;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .graph .header {
   width: 100%;
@@ -526,12 +538,14 @@ body {
   display: block;
   font: 30px "proxima_novalight";
 }
-.graph .graph-main {
+
+.graph-main {
+  border: 1px solid rgba(255, 255, 255, 0.3);
   width: 100%;
   height: 222px;
   background: url(../img/graph.png) no-repeat;
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
 .graph .footer {
   width: 100%;
   height: 100px;
@@ -558,11 +572,11 @@ body {
 }
 
 .download {
+  border: 1px solid rgba(255, 255, 255, 0.3);
   width: 100%;
   height: 390px;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .download .header {
   width: 100%;
@@ -588,31 +602,25 @@ body {
   height: 165px;
   display: block;
 }
-.download .download-main .download-progress {
+
+.download-progress {
   text-align: center;
 }
-.download .download-main .download-progress strong {
+.download-progress strong {
   font: 16px "proxima_novaregular";
   color: #fff;
 }
-.download .download-main .download-progress strong span {
+.download-progress strong span {
   display: block;
   font: 30px "proxima_novalight";
 }
 
-.loc-btn-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .location {
+  border: 1px solid rgba(255, 255, 255, 0.3);
   width: 100%;
   height: 145px;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .location .header {
   width: 100%;
@@ -625,19 +633,20 @@ body {
   text-transform: uppercase;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-.location .location-main {
+
+.location-main {
   background: rgba(255, 255, 255, 0.1);
   height: 85px;
   padding: 0 15%;
 }
-.location .location-main strong {
+.location-main strong {
   float: left;
   position: relative;
   font: 16px "proxima_novaregular";
   color: #fff;
   margin-top: 30px;
 }
-.location .location-main strong::before {
+.location-main strong::before {
   position: absolute;
   content: "\e947";
   font-family: "icomoon" !important;
@@ -646,13 +655,13 @@ body {
   color: rgba(255, 255, 255, 0.4);
   font-size: 24px;
 }
-.location .location-main .border-vert {
+.location-main .border-vert {
   display: inline;
   float: right;
   position: relative;
   margin: 3px 30px 0 0;
 }
-.location .location-main .border-vert::after {
+.location-main .border-vert::after {
   position: absolute;
   content: "\ea52";
   font-family: "icomoon" !important;
@@ -670,6 +679,7 @@ body {
 }
 
 .white-btn {
+  border: 1px solid rgba(255, 255, 255, 0.3);
   width: 250px;
   height: 60px;
   background-color: rgba(255, 255, 255, 0.4);
@@ -681,13 +691,13 @@ body {
   text-decoration: none;
   border-radius: 10px;
   transition: all 0.5s;
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .white-btn:hover {
   box-shadow: inset 0 0 0.55em 0em #fff;
 }
 
 .dark-blue-btn {
+  border: 1px solid rgba(255, 255, 255, 0.3);
   width: 250px;
   height: 60px;
   background-color: rgba(73, 119, 208, 0.53);
@@ -699,13 +709,13 @@ body {
   text-decoration: none;
   border-radius: 10px;
   transition: all 0.5s;
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .dark-blue-btn:hover {
   box-shadow: inset 0 0 0.55em 0em #fff;
 }
 
 .blue-btn {
+  border: 1px solid rgba(255, 255, 255, 0.3);
   width: 250px;
   height: 60px;
   background-color: rgba(105, 193, 242, 0.53);
@@ -717,13 +727,13 @@ body {
   text-decoration: none;
   border-radius: 10px;
   transition: all 0.5s;
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .blue-btn:hover {
   box-shadow: inset 0 0 0.55em 0em #fff;
 }
 
 .green-btn {
+  border: 1px solid rgba(255, 255, 255, 0.3);
   width: 250px;
   height: 60px;
   background-color: rgba(84, 193, 118, 0.53);
@@ -735,7 +745,6 @@ body {
   text-decoration: none;
   border-radius: 10px;
   transition: all 0.5s;
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .green-btn:hover {
   box-shadow: inset 0 0 0.55em 0em #fff;

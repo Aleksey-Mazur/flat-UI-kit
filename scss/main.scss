@@ -33,12 +33,27 @@ body {
   }
 }
 
+.border-vert {
+  width: 1px;
+  height: 78px;
+  background: $hover-color;
+  display: block;
+}
+
+.loc-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// =====Recipe=====
 .recipe {
+  @include border;
   width: 100%;
   height: 430px;
   border-radius: $radius;
   overflow: hidden;
-  @include border;
   .header {
     @include header(url(../img/pie.jpg) no-repeat, 190px);
     background-size: cover;
@@ -61,85 +76,33 @@ body {
         font-size: 22px;
         cursor: pointer;
       }
-      a {
-        height: $main-height;
-        width: 100%;
-        display: block;
-        border-bottom: 1px solid $border-color;
-        border-left: 7px solid transparent;
-        font: $reg-font;
-        color: #fff;
-        text-decoration: none;
-        padding: 20px 0 20px 25px;
-      }
     }
     li.active::before {
       color: rgba(255, 255, 255, 0.85);
     }
   }
 }
+.recipe-main li a {
+  height: $main-height;
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid $border-color;
+  border-left: 7px solid transparent;
+  font: $reg-font;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px 0 20px 25px;
+}
 
+// =====Login form=====
 .login {
+  @include border;
   width: 100%;
   height: 388px;
   border-radius: $radius;
   overflow: hidden;
-  @include border;
   .header {
     @include header($dark-blue, $main-height);
-  }
-  form {
-    background: $bg-color;
-    height: 268px;
-    font: $reg-font;
-    color: #fff;
-    fieldset {
-      width: 85%;
-      height: 100%;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      .row {
-        width: 100%;
-        height: 100px;
-        [type="email"],
-        [type="password"] {
-          display: block;
-          height: $main-height;
-          width: 100%;
-          background: $hover-color;
-          outline: none;
-          @include border;
-          border-radius: $radius;
-          color: #fff;
-        }
-        ::placeholder {
-          color: #fff;
-        }
-        .active {
-          background: $btn-color;
-        }
-      }
-      .more {
-        position: relative;
-        font: 14px "skolar_peregular";
-        &:before,
-        &:after {
-          content: "";
-          position: absolute;
-          width: 105px;
-          height: 1px;
-          background: $input-color;
-          top: 6px;
-          right: 25px;
-        }
-        &:after {
-          left: 25px;
-        }
-      }
-    }
   }
   .footer {
     @include footer($input-color);
@@ -157,29 +120,76 @@ body {
     }
   }
 }
-
-.border-vert {
-  width: 1px;
-  height: 78px;
-  background: $hover-color;
-  display: block;
+.login form {
+  background: $bg-color;
+  height: 268px;
+  font: $reg-font;
+  color: #fff;
+  fieldset {
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .row {
+      width: 100%;
+      height: 100px;
+      [type="email"],
+      [type="password"] {
+        @include border;
+        display: block;
+        height: $main-height;
+        width: 100%;
+        background: $hover-color;
+        outline: none;
+        border-radius: $radius;
+        color: #fff;
+      }
+      ::placeholder {
+        color: #fff;
+      }
+      .active {
+        background: $btn-color;
+      }
+    }
+  }
+}
+.login form fieldset .more {
+  position: relative;
+  font: 14px "skolar_peregular";
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 105px;
+    height: 1px;
+    background: $input-color;
+    top: 6px;
+    right: 25px;
+  }
+  &:after {
+    left: 25px;
+  }
 }
 
+// =====Profile=====
 .profile {
+  @include border;
   width: 100%;
   height: 425px;
   border-radius: $radius;
   overflow: hidden;
-  @include border;
   .header {
     @include header($brown, $main-height);
   }
   .info {
+    @include border;
     width: 100%;
     height: 150px;
     background: url(../img/profile_bg.jpg) no-repeat;
     background-size: cover;
-    @include border;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -189,59 +199,60 @@ body {
       border: 4px solid #b9a69e;
       border-radius: 50%;
     }
-    strong {
-      font: $main-font;
-      color: #fff;
-      span {
-        display: block;
-        font: $reg-font;
-        position: relative;
-        padding-left: 24px;
-        &::before {
-          position: absolute;
-          content: "\e947";
-          font-family: "icomoon" !important;
-          top: 0;
-          left: 0;
-        }
-      }
-    }
   }
-  .profile-main {
-    background: $bg-color;
-    height: 215px;
-    .flw-section {
-      @include header(transparent, 120px);
-      border-bottom: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      strong {
-        display: inline-block;
-        width: 100px;
-        height: 78px;
-        padding-top: 15px;
-        font: 16px "proxima_novaregular";
-        text-transform: none;
-        span {
-          display: block;
-          font: 30px "proxima_novalight";
-        }
-      }
-    }
-    a {
-      display: block;
-      margin: auto;
+}
+.profile .info strong {
+  font: $main-font;
+  color: #fff;
+  span {
+    display: block;
+    font: $reg-font;
+    position: relative;
+    padding-left: 24px;
+    &::before {
+      position: absolute;
+      content: "\e947";
+      font-family: "icomoon" !important;
+      top: 0;
+      left: 0;
     }
   }
 }
+.profile-main {
+  background: $bg-color;
+  height: 215px;
+  .flw-section {
+    @include header(transparent, 120px);
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    strong {
+      display: inline-block;
+      width: 100px;
+      height: 78px;
+      padding-top: 15px;
+      font: 16px "proxima_novaregular";
+      text-transform: none;
+      span {
+        display: block;
+        font: 30px "proxima_novalight";
+      }
+    }
+  }
+  a {
+    display: block;
+    margin: auto;
+  }
+}
 
+// =====Graph module=====
 .graph {
+  @include border;
   width: 100%;
   height: 422px;
   border-radius: $radius;
   overflow: hidden;
-  @include border;
   .header {
     @include header($blue, 100px);
     display: flex;
@@ -258,36 +269,37 @@ body {
       }
     }
   }
-  .graph-main {
-    width: $main-width;
-    height: 222px;
-    background: url(../img/graph.png) no-repeat;
-    @include border;
-  }
-  .footer {
-    @include header($bg-color, 100px);
-    display: flex;
-    align-items: center;
-    strong {
-      display: inline-block;
-      width: 100px;
-      height: 78px;
-      padding-top: 25px;
-      font: 10px "proxima_novaregular";
-      span {
-        display: block;
-        font: 30px "proxima_novalight";
-      }
+}
+.graph-main {
+  @include border;
+  width: $main-width;
+  height: 222px;
+  background: url(../img/graph.png) no-repeat;
+}
+.graph .footer {
+  @include header($bg-color, 100px);
+  display: flex;
+  align-items: center;
+  strong {
+    display: inline-block;
+    width: 100px;
+    height: 78px;
+    padding-top: 25px;
+    font: 10px "proxima_novaregular";
+    span {
+      display: block;
+      font: 30px "proxima_novalight";
     }
   }
 }
 
+// =====Download progress=====
 .download {
+  @include border;
   width: 100%;
   height: 390px;
   border-radius: $radius;
   overflow: hidden;
-  @include border;
   .header {
     @include header($green, $main-height);
   }
@@ -303,74 +315,69 @@ body {
       height: 165px;
       display: block;
     }
-    .download-progress {
-      text-align: center;
-      strong {
-        font: $reg-font;
-        color: #fff;
-        span {
-          display: block;
-          font: $num-font;
-        }
-      }
+  }
+}
+.download-progress {
+  text-align: center;
+  strong {
+    font: $reg-font;
+    color: #fff;
+    span {
+      display: block;
+      font: $num-font;
     }
   }
 }
 
-.loc-btn-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
+// =====Location module=====
 .location {
+  @include border;
   width: 100%;
   height: 145px;
   border-radius: $radius;
   overflow: hidden;
-  @include border;
   .header {
     @include header($beige, $main-height);
   }
-  .location-main {
-    background: $bg-color;
-    height: 85px;
-    padding: 0 15%;
-    strong {
-      float: left;
-      position: relative;
-      font: $reg-font;
-      color: #fff;
-      margin-top: 30px;
-      &::before {
-        position: absolute;
-        content: "\e947";
-        font-family: "icomoon" !important;
-        top: -4px;
-        left: -29px;
-        color: $input-color;
-        font-size: 24px;
-      }
+}
+.location-main {
+  background: $bg-color;
+  height: 85px;
+  padding: 0 15%;
+  strong {
+    float: left;
+    position: relative;
+    font: $reg-font;
+    color: #fff;
+    margin-top: 30px;
+    &::before {
+      position: absolute;
+      content: "\e947";
+      font-family: "icomoon" !important;
+      top: -4px;
+      left: -29px;
+      color: $input-color;
+      font-size: 24px;
     }
-    .border-vert {
-      display: inline;
-      float: right;
-      position: relative;
-      margin: 3px 30px 0 0;
-      &::after {
-        position: absolute;
-        content: "\ea52";
-        font-family: "icomoon" !important;
-        top: 26px;
-        left: 30px;
-        color: $input-color;
-        font-size: 24px;
-      }
+  }
+  .border-vert {
+    display: inline;
+    float: right;
+    position: relative;
+    margin: 3px 30px 0 0;
+    &::after {
+      position: absolute;
+      content: "\ea52";
+      font-family: "icomoon" !important;
+      top: 26px;
+      left: 30px;
+      color: $input-color;
+      font-size: 24px;
     }
   }
 }
 
+// =====Buttons=====
 .btn-wrapper {
   height: 275px;
   display: flex;

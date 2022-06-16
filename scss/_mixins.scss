@@ -20,6 +20,7 @@
 }
 
 @mixin button($bg) {
+  @include border;
   width: 250px;
   height: $main-height;
   background-color: $bg;
@@ -31,7 +32,6 @@
   text-decoration: none;
   border-radius: $radius;
   transition: all 0.5s;
-  @include border;
   &:hover {
     box-shadow: inset 0 0 0.55em 0em #fff;
   }
